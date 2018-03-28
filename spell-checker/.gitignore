@@ -9,7 +9,3 @@ pom.xml.asc
 /.nrepl-port
 .hgignore
 .hg/
-*.iml
-/crawler/.idea
-/news_diff/.idea
-/spell-checker/.idea
