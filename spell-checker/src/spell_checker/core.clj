@@ -85,7 +85,7 @@
                            (map #(:words (mc/find-one-as-map db tgrams-coll {:tgram %})))
                            (flatten)
                            (set)
-                           (map #(vector % (lev/da-lev word %)))
+                           (map #(vector % (lev/lev word %)))
                            (sort-by #(get % 1)))]
     (->> (take n sorted-tokens)
          (map #(conj % (:amount (mc/find-one-as-map db tokens-coll {:word (get % 0)}))))
